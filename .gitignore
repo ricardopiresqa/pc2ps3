@@ -1,0 +1,60 @@
+build/
+build-*/
+dist/
+original-pc/
+original-console/
+/Cuphead/
+/rea/
+/.thoth/
+analysis/evidence/
+asset-manifest.json
+prototype.ppm
+*.pkg
+*.self
+*.elf
+*.bin
+*.iso
+*.log
+*.assets
+*.bundle
+*.unity3d
+*.obj
+*.o
+*.a
+*.lib
+*.pdb
+*.ilk
+*.exe
+*.dll
+*.so
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+__pycache__/
+/rpcs3-*/
+# Commercial archives and PS3 package staging
+*.rar
+/packaging/ps3/pkgfiles/
+# Local-only port derived from a decompiled commercial game (personal use, never commit)
+/games/cuphead/
+# Local-only extractor for the gitignored Cuphead module (lists commercial asset names)
+/tools/cuphead_extract.py
+
+# Scratch, caches and tool output
+/tmp/
+/tmp*/
+/.playwright-mcp/
+.pytest_cache/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Testing/
+/clickup-list-snapshot.yml
+/.claude/
+*.tar
+
+# Internal process notes (local only)
+/docs/LOCAL_*.md
+/prompt.md

@@ -1,0 +1,15 @@
+.git
+.thoth
+.env
+.env.*
+build
+build-*
+dist
+original-pc
+original-console
+analysis
+*.pkg
+*.elf
+*.self
+*.iso
+*.log

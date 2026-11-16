@@ -1,0 +1,15 @@
+{
+  "base_image": null,
+  "components": {
+    "ps3toolchain": {"repository": null, "commit": null, "license": null, "evidence": null},
+    "PSL1GHT": {"repository": null, "commit": null, "license": null, "evidence": null},
+    "SDL2_PSL1GHT": {"repository": null, "commit": null, "license": null, "evidence": null}
+  },
+  "ps3dev": null,
+  "psl1ght": null,
+  "ppu_cc": null,
+  "ppu_readelf": null,
+  "sdl2_config": null,
+  "compile_flags": [],
+  "link_flags": []
+}

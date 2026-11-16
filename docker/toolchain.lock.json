@@ -1,0 +1,32 @@
+{
+  "dockerfile": "docker/ps3dev.Dockerfile",
+  "image_tag": "pc2ps3/ps3dev:1",
+  "base_image": "ubuntu:24.04",
+  "components": {
+    "ps3toolchain": {
+      "repository": "https://github.com/ps3aqua/ps3toolchain",
+      "commit": "961fddac01337f18da08f4471d558a7a5b0d9af2",
+      "license": "BSD-style (per-component GNU licenses for binutils/gcc/newlib)",
+      "evidence": "Cloned and checked out by docker/ps3dev.Dockerfile (ARG PS3TOOLCHAIN_COMMIT); recipe from akinozgen/fallout1-ce-ps3 docker/Dockerfile"
+    },
+    "PSL1GHT": {
+      "repository": "https://github.com/ps3aqua/PSL1GHT",
+      "commit": "af9d3d964c8faa69abce4961a269f9582e05a33f",
+      "license": "MIT",
+      "evidence": "Pinned by PSL1GHT_VERSION in ps3toolchain scripts/008-psl1ght.sh at the commit above"
+    },
+    "SDL2_PSL1GHT": {
+      "repository": "https://github.com/akinozgen/fallout1-ce-ps3 (SDL2_PSL1GHT/, vendored from ps3aqua/SDL2_PSL1GHT with renderer fixes)",
+      "commit": "e4f14cb406ccbab7bc94f85cfd8c596fe4b7c419",
+      "license": "Zlib",
+      "evidence": "Sparse checkout in docker/ps3dev.Dockerfile (ARG FALLOUT_PS3_COMMIT); same tree proven on RPCS3 and PS3HEN by that project"
+    }
+  },
+  "ps3dev": "/usr/local/ps3dev",
+  "psl1ght": "/usr/local/ps3dev",
+  "ppu_cc": "/usr/local/ps3dev/ppu/bin/ppu-gcc",
+  "ppu_readelf": "/usr/local/ps3dev/ppu/bin/ppu-readelf",
+  "sdl2_config": "/usr/local/ps3dev/portlibs/ppu/bin/sdl2-config",
+  "compile_flags": ["-mcpu=cell", "-mhard-float", "-I/usr/local/ps3dev/ppu/include"],
+  "link_flags": ["-L/usr/local/ps3dev/ppu/lib", "-lrsx", "-lgcm_sys", "-lio", "-lsysutil", "-lrt", "-llv2", "-laudio", "-lm"]
+}
